@@ -1,0 +1,41 @@
+<head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+  
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+  </head>
+  <body>
+    <h1 class="md-typescale-display-medium">Hello Material!</h1>
+    <form>
+      <md-outlined-text-field label="Nomor Tlp.*" value="62"></md-outlined-text-field>
+      <md-outlined-text-field label="Masukkan Sandi*"></md-outlined-text-field>
+      <md-outlined-button>Facebook</md-outlined-button>
+    </form>
+    <style>
+          :root {
+        --md-outlined-button-container-shape: 12px;
+        --md-outlined-button-label-text-font: system-ui;
+        --md-sys-color-primary: #0b6bcb;
+        --md-sys-color-on-primary: #FFFFFF;
+      }
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+    </style>
+  </body>  
